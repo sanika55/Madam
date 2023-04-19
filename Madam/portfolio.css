@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background:black;
+    background-position: left;
+    background-size: cover;
+    overflow-x: hidden;
+    
+    
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    transition: background 1s;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 600;
+    color:black;
+}
+nav .logo img{
+    width: 60px;
+    margin-right: 10px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: aqua;
+    font-weight: 500;
+}
+nav:hover{
+    background:aqua;
+}
+nav:hover .logo{
+    color: #333;
+}
+nav:hover ul li a{
+    color: #333;
+}
+    
+.content{
+    margin-top: 9%;
+    margin-left:9%;
+    color: aqua;
+}
+.content h1{
+    text-align: right;
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px aqua;
+    background: url(back.png);
+    -webkit-background-clip: text;
+    background-position: left;
+    animation: back 20s linear infinite;
+}
+@keyframes back {
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.Container .box
+{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: red;
+    margin: -300px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Container .box::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg,#4dff03,#00d0ff);
+}
+.Container .box::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg,#4dff03,#00d0ff);
+    filter: blur(30px);
+}
+.Container .box b
+{
+    position: absolute;
+    inset: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+.Container .box img
+{
+    position: absolute;
+    z-index: 3;
+    scale: 0.8;
+    opacity: 0.25;
+    transition: 0.5s;
+}
+.Container .box:hover img
+{
+    scale: 0.6;
+    opacity: 0.9;
+    transform: translateY(-70px);
+    
+}
+
